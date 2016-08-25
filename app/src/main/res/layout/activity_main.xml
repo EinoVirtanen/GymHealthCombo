@@ -9,7 +9,7 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     tools:context="fi.dy.einovirtanen.gymhealthcombo.MainActivity"
-    android:background="@drawable/gsp">
+    android:background="#000000">
 
 
     <LinearLayout
@@ -24,7 +24,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="0APNK"
+            android:text="0APN"
             android:id="@+id/firstCounterTitle"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
@@ -40,7 +40,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="123"
+            android:text="0"
             android:id="@+id/firstCounterText"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
@@ -82,7 +82,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="123"
+            android:text="0"
             android:id="@+id/secondCounterText"
             android:layout_weight="1"
             android:layout_gravity="center_horizontal"

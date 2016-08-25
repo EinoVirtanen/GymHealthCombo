@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     /*
     SETUP:
      */
-    long leftCounterEpochTimestampInSeconds = 1471057200;
+    long leftCounterEpochTimestampInSeconds = 1472158020;
     long rightCounterEpochTimestampInSeconds = 1471212000;
 
     TextView firstCounterText;
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 try {
                     while (!isInterrupted()) {
-                        Thread.sleep(1000); // TODO: add: *60*60 Execute once per hour. That is precise enough.
+                        Thread.sleep(1000);
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
