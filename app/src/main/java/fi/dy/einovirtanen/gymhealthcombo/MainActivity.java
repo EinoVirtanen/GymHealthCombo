@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     /*
     SETUP:
      */
-    long leftCounterEpochTimestampInSeconds = 1472158020;
+    long leftCounterEpochTimestampInSeconds = 1472333259;
     long rightCounterEpochTimestampInSeconds = 1471212000;
 
     TextView firstCounterText;
