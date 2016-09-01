@@ -5,18 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import java.util.Calendar;
-import java.util.Date;
-
 public class MainActivity extends AppCompatActivity {
 
     /*
     SETUP:
      */
-    long leftCounterEpochTimestampInSeconds = 1472400337;
     long rightCounterEpochTimestampInSeconds = 1471212000;
 
-    TextView firstCounterText;
     TextView secondCounterText;
 
     @Override
@@ -31,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         // Initialize text fields:
-        firstCounterText = (TextView) findViewById(R.id.firstCounterText);
         secondCounterText = (TextView) findViewById(R.id.secondCounterText);
 
         Thread t = new Thread() {
@@ -44,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                firstCounterText.setText(Long.toString((System.currentTimeMillis()/1000-leftCounterEpochTimestampInSeconds)/60/60/24));
                                 secondCounterText.setText(Long.toString((System.currentTimeMillis()/1000-rightCounterEpochTimestampInSeconds)/60/60/24));
                             }
                         });
