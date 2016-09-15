@@ -10,8 +10,10 @@ public class MainActivity extends AppCompatActivity {
     /*
     SETUP:
      */
-    long rightCounterEpochTimestampInSeconds = 1473686534-(60*60*24); // Minus one day
+    long leftCounterEpochTimestampInSeconds = 1473962857-(60*60*24); // Minus one day
+    long rightCounterEpochTimestampInSeconds = 1473891014;
 
+    TextView firstCounterText;
     TextView secondCounterText;
 
     @Override
@@ -19,13 +21,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Hide status bar and notification bar:
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-        getSupportActionBar().hide();
 
         // Initialize text fields:
+        firstCounterText = (TextView) findViewById(R.id.firstCounterText);
         secondCounterText = (TextView) findViewById(R.id.secondCounterText);
 
         Thread t = new Thread() {
@@ -38,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
+                                firstCounterText.setText(Long.toString((System.currentTimeMillis()/1000-leftCounterEpochTimestampInSeconds)/60/60/24));
                                 secondCounterText.setText(Long.toString((System.currentTimeMillis()/1000-rightCounterEpochTimestampInSeconds)/60/60/24));
                             }
                         });
@@ -48,6 +47,19 @@ public class MainActivity extends AppCompatActivity {
         };
 
         t.start();
+
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // Hide status bar and notification bar:
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+        getSupportActionBar().hide();
 
 
     }

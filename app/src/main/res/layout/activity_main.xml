@@ -24,11 +24,11 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="GYM COMBO"
-            android:id="@+id/secondCounterTitle"
+            android:id="@+id/firstCounterTitle"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/colorPrimaryDark"
             android:gravity="center"
-            android:textSize="50dp"
+            android:textSize="40dp"
             android:shadowColor="#000000"
             android:shadowDx="1"
             android:shadowDy="1"
@@ -38,7 +38,47 @@
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="000"
+            android:text="00"
+            android:id="@+id/firstCounterText"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_horizontal"
+            android:typeface="sans"
+            android:textSize="200dp"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="5"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="0dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0APN"
+            android:id="@+id/secondCounterTitle"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:textSize="40dp"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="5"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="00"
             android:id="@+id/secondCounterText"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/colorPrimary"
