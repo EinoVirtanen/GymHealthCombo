@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     SETUP:
      */
     long leftCounterEpochTimestampInSeconds = 1473962857-(60*60*24); // Minus one day
-    long rightCounterEpochTimestampInSeconds = 1473891014;
+    long rightCounterEpochTimestampInSeconds = 1474237471;
 
     TextView firstCounterText;
     TextView secondCounterText;
