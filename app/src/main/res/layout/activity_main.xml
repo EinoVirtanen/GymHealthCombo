@@ -63,7 +63,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="0APN"
+            android:text="E0APNK"
             android:id="@+id/secondCounterTitle"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/colorPrimaryDark"

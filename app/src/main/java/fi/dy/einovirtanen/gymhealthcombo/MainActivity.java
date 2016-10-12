@@ -10,8 +10,8 @@ public class MainActivity extends AppCompatActivity {
     /*
     SETUP:
      */
-    long leftCounterEpochTimestampInSeconds = 1473962857-(60*60*24); // Minus one day
-    long rightCounterEpochTimestampInSeconds = 1474975711;
+    long leftCounterEpochTimestampInSeconds = 1475605800-(60*60*24); // Minus one day
+    long rightCounterEpochTimestampInSeconds = 1476230995;
 
     TextView firstCounterText;
     TextView secondCounterText;
@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                //firstCounterText.setText(Long.toString((System.currentTimeMillis()/1000-leftCounterEpochTimestampInSeconds)/60/60/24));
-                                firstCounterText.setText("0");
+                                firstCounterText.setText(Long.toString((System.currentTimeMillis()/1000-leftCounterEpochTimestampInSeconds)/60/60/24));
+                                //firstCounterText.setText("0");
                                 secondCounterText.setText(Long.toString((System.currentTimeMillis()/1000-rightCounterEpochTimestampInSeconds)/60/60/24));
                             }
                         });
